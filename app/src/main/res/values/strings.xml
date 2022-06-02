@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SiCamat</string>
+    <string name="application_name">SI CAMAT</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">login</string>
+    <string name="logo">ini adalah logo pemerintahan bandung</string>
+</resources>
