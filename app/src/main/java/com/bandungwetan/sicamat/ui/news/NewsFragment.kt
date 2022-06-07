@@ -28,7 +28,7 @@ class NewsFragment : Fragment() {
         _binding = FragmentNewsBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textDashboard
+        val textView: TextView = binding.textNews
         dashboardViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
