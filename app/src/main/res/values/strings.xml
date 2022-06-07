@@ -11,4 +11,11 @@
     <string name="title_notifications">Notifications</string>
     <string name="title_news">News</string>
     <string name="title_setting">Settings</string>
+    <string name="date">Senin, 23 Mei 2022</string>
+    <string name="agenda_name">Rapat Rutinan</string>
+    <string name="weather_condition">Cerah</string>
+    <string name="adzan_name">Dzuhur</string>
+    <string name="weather_celcius">27°C</string>
+    <string name="adzan_time">11:55</string>
+    <string name="menu">Menu</string>
 </resources>
