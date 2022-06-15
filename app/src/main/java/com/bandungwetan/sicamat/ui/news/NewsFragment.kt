@@ -2,15 +2,21 @@ package com.bandungwetan.sicamat.ui.news
 
 import android.os.Build
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.text.Html
+import androidx.navigation.findNavController
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
+import com.bandungwetan.sicamat.R
 import com.bandungwetan.sicamat.databinding.FragmentNewsBinding
 
 class NewsFragment : Fragment() {
@@ -19,6 +25,9 @@ class NewsFragment : Fragment() {
     private lateinit var adapter: ImageSliderAdapter
     private val list = ArrayList<ImageData>()
     private lateinit var dots: ArrayList<TextView>
+    private lateinit var handler: Handler
+    private lateinit var runnable: Runnable
+    private lateinit var Radapter: RecyclerView.Adapter<RecyleviewAdapter.ViewHolder>? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -36,6 +45,18 @@ class NewsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        handler = Handler(Looper.getMainLooper())
+        runnable = object : Runnable {
+            var index = 0
+            override fun run() {
+                if (index == list.size)
+                    index = 0
+                Log.e("Runnable,", "$index")
+                binding.viewPager.setCurrentItem(index)
+                index++
+                handler.postDelayed(this,2000)
+            }
+        }
         list.add(
             ImageData(
                 "https://source.unsplash.com/ym0THh5L-fg"
@@ -54,6 +75,7 @@ class NewsFragment : Fragment() {
             )
         )
         adapter = ImageSliderAdapter(list)
+        binding.recyclerview.adapter = Radapter
         binding.viewPager.adapter = adapter
         dots = ArrayList()
         setIndicator()
@@ -64,13 +86,15 @@ class NewsFragment : Fragment() {
                 super.onPageSelected(position)
             }
         })
+
+        handler.post(runnable)
     }
 
     private fun selectedDot(position: Int) {
         for (i in 0 until list.size){
             if(i == position)
                 dots[i].setTextColor(ContextCompat.getColor(requireContext(),
-                    com.google.android.material.R.color.design_dark_default_color_background))
+                    R.color.black))
             else
                 dots[i].setTextColor(ContextCompat.getColor(requireContext(),
                     com.google.android.material.R.color.design_dark_default_color_secondary))
