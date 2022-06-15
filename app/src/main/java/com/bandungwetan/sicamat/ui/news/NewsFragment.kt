@@ -22,16 +22,16 @@ import com.bandungwetan.sicamat.databinding.FragmentNewsBinding
 class NewsFragment : Fragment() {
 
     private var _binding: FragmentNewsBinding? = null
+    private val binding get() = _binding!!
     private lateinit var adapter: ImageSliderAdapter
     private val list = ArrayList<ImageData>()
     private lateinit var dots: ArrayList<TextView>
     private lateinit var handler: Handler
     private lateinit var runnable: Runnable
-    private lateinit var Radapter: RecyclerView.Adapter<RecyleviewAdapter.ViewHolder>? = null
+//    private var Radapter: RecyclerView.Adapter<RecyleviewAdapter.ViewHolder>? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
-    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -52,7 +52,7 @@ class NewsFragment : Fragment() {
                 if (index == list.size)
                     index = 0
                 Log.e("Runnable,", "$index")
-                binding.viewPager.setCurrentItem(index)
+//                binding.viewPager.setCurrentItem(index)
                 index++
                 handler.postDelayed(this,2000)
             }
@@ -75,7 +75,7 @@ class NewsFragment : Fragment() {
             )
         )
         adapter = ImageSliderAdapter(list)
-        binding.recyclerview.adapter = Radapter
+//        binding.recyclerview.adapter = Radapter
         binding.viewPager.adapter = adapter
         dots = ArrayList()
         setIndicator()
