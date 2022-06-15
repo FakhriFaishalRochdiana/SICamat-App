@@ -3,6 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/PROGAMMING/ANDROID/SICamat-App/app/src/main/res/drawable/button_login.xml" value="0.2075" />
+        <entry key="..\:/PROGAMMING/ANDROID/SICamat-App/app/src/main/res/layout/activity_login.xml" value="0.2" />
+        <entry key="..\:/PROGAMMING/ANDROID/SICamat-App/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/PROGAMMING/ANDROID/SICamat-App/app/src/main/res/layout/fragment_home.xml" value="0.2" />
+        <entry key="..\:/PROGAMMING/ANDROID/SICamat-App/app/src/main/res/layout/fragment_news.xml" value="0.22" />
+        <entry key="..\:/PROGAMMING/ANDROID/SICamat-App/app/src/main/res/layout/news_data.xml" value="0.22" />
         <entry key="..\:/Users/Udel/Documents/Kuliah/KP/SICamat-App/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/Udel/Documents/Kuliah/KP/SICamat-App/app/src/main/res/layout/activity_main2.xml" value="0.18541666666666667" />
         <entry key="..\:/Users/Udel/Documents/Kuliah/KP/SICamat-App/app/src/main/res/layout/fragment_home.xml" value="0.18541666666666667" />
