@@ -173,7 +173,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cardView5"
+                android:id="@+id/cv_adzan"
                 android:layout_width="176dp"
                 android:layout_height="96dp"
                 android:layout_marginTop="8dp"
@@ -185,7 +185,7 @@
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/adzan">
+                    android:background="@drawable/adzan_item">
 
                     <TextView
                         android:id="@+id/tv_adzan"

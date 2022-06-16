@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SiCamat" >
         <activity
+            android:name=".ui.activity.adzan.AdzanActivity"
+            android:exported="false" />
+        <activity
             android:name=".AgendaActivity"
             android:exported="false" />
         <activity
@@ -20,7 +23,7 @@
             android:label="@string/title_activity_main" />
         <activity
             android:name=".LoginActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
