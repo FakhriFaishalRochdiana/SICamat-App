@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SiCamat">
         <activity
+            android:name=".PemerintahanActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.activity.adzan.AdzanActivity"
             android:exported="false" />
         <activity
