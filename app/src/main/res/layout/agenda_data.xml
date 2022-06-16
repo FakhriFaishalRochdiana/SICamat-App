@@ -2,38 +2,30 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/cardview_news"
-    android:layout_width="360dp"
-    android:layout_height="114dp"
-    android:layout_marginTop="16dp"
-    android:layout_marginLeft="24dp"
+    android:layout_width="362dp"
+    android:layout_height="112dp"
+    android:layout_marginTop="27dp"
     app:cardCornerRadius="8dp"
+    android:layout_marginLeft="24dp"
     app:layout_constraintStart_toStartOf="@+id/judul_news2"
     app:layout_constraintTop_toBottomOf="@+id/judul_news2">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="342dp"
-        android:layout_height="match_parent">
-
-        <ImageView
-            android:id="@+id/item_image"
-            android:layout_width="114dp"
-            android:layout_height="114dp"
-            android:src="@drawable/news_detail"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/blue">
 
         <TextView
             android:id="@+id/item_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="20dp"
             android:fontFamily="@font/poppins_bold"
-            android:maxWidth="200dp"
-            android:text="Kini Konser Sudah dapat digelar kembali"
-            android:textSize="14sp"
-            app:layout_constraintStart_toEndOf="@+id/item_image"
+            android:text="Rapat rutinan"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
@@ -42,8 +34,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
             android:fontFamily="@font/poppins_light"
+            android:textColor="@color/white"
             android:maxWidth="200dp"
-            android:text="23 Mei 2022"
+            android:text="Rab, 13 Mei · 10.00-11.00"
             android:textSize="12sp"
             app:layout_constraintStart_toStartOf="@+id/item_title"
             app:layout_constraintTop_toBottomOf="@+id/item_title" />

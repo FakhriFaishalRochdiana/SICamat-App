@@ -9,8 +9,9 @@ import androidx.fragment.app.Fragment
 import com.bandungwetan.sicamat.R
 import com.bandungwetan.sicamat.databinding.FragmentHomeBinding
 import com.bandungwetan.sicamat.ui.activity.adzan.AdzanActivity
+import com.bandungwetan.sicamat.ui.activity.agenda.AgendaActivity
 
-class   HomeFragment : Fragment(), View.OnClickListener {
+class HomeFragment : Fragment(), View.OnClickListener {
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
@@ -28,7 +29,9 @@ class   HomeFragment : Fragment(), View.OnClickListener {
         super.onViewCreated(view, savedInstanceState)
 
         binding.cvAdzan.setOnClickListener(this)
+        binding.cvAgenda.setOnClickListener(this)
     }
+
 
     override fun onDestroyView() {
         super.onDestroyView()
@@ -39,6 +42,10 @@ class   HomeFragment : Fragment(), View.OnClickListener {
         when (view?.id){
             R.id.cv_adzan -> {
                 val intent = Intent(activity, AdzanActivity::class.java)
+                startActivity(intent)
+            }
+            R.id.cv_agenda -> {
+                val intent = Intent(activity, AgendaActivity::class.java)
                 startActivity(intent)
             }
         }
