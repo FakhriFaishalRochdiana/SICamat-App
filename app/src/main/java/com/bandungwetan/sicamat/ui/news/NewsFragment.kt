@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.text.Html
-import androidx.navigation.findNavController
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -13,8 +12,6 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import com.bandungwetan.sicamat.R
 import com.bandungwetan.sicamat.databinding.FragmentNewsBinding
@@ -28,7 +25,7 @@ class NewsFragment : Fragment() {
     private lateinit var dots: ArrayList<TextView>
     private lateinit var handler: Handler
     private lateinit var runnable: Runnable
-//    private var Radapter: RecyclerView.Adapter<RecyleviewAdapter.ViewHolder>? = null
+    private lateinit var newsAdapter : NewsRecyleviewAdapter
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -74,8 +71,9 @@ class NewsFragment : Fragment() {
                 "https://source.unsplash.com/rJvD7EsB4Jg"
             )
         )
+        newsAdapter = NewsRecyleviewAdapter()
         adapter = ImageSliderAdapter(list)
-//        binding.recyclerview.adapter = Radapter
+        binding.recyclerview.adapter = newsAdapter
         binding.viewPager.adapter = adapter
         dots = ArrayList()
         setIndicator()
@@ -97,7 +95,7 @@ class NewsFragment : Fragment() {
                     R.color.black))
             else
                 dots[i].setTextColor(ContextCompat.getColor(requireContext(),
-                    com.google.android.material.R.color.design_dark_default_color_secondary))
+                    R.color.grey))
         }
     }
 
@@ -114,6 +112,7 @@ class NewsFragment : Fragment() {
 
         }
     }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

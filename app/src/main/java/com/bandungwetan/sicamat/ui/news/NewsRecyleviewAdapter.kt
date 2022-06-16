@@ -5,27 +5,26 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.appcompat.view.menu.MenuView
 import androidx.recyclerview.widget.RecyclerView
 import com.bandungwetan.sicamat.R
 
-class RecyleviewAdapter : RecyclerView.Adapter<RecyleviewAdapter.ViewHolder>() {
+class NewsRecyleviewAdapter : RecyclerView.Adapter<NewsRecyleviewAdapter.ViewHolder>() {
 
     private var titles = arrayOf("Chapter One","Chapter Two","Chapter Three","Chapter Four","Chapter Five","Chapter Six","Chapter Seven","Chapter Eight")
     private var details = arrayOf("Item one details","Item two details","Item three details","Item four details",
     "Item five details","Item six details","Item seven details","Item eight details")
-    private val images = intArrayOf(R.drawable.adzan,R.drawable.adzan,R.drawable.adzan,R.drawable.adzan,R.drawable.adzan,
-        R.drawable.adzan,R.drawable.adzan,R.drawable.adzan)
+    private val images = intArrayOf(R.drawable.news_detail,R.drawable.news_detail,R.drawable.news_detail,R.drawable.news_detail,R.drawable.news_detail,
+        R.drawable.news_detail,R.drawable.news_detail,R.drawable.news_detail)
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): RecyleviewAdapter.ViewHolder {
+    ): NewsRecyleviewAdapter.ViewHolder {
         val v = LayoutInflater.from(parent.context).inflate(R.layout.news_data,parent,false)
         return ViewHolder(v)
     }
 
-    override fun onBindViewHolder(holder: RecyleviewAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: NewsRecyleviewAdapter.ViewHolder, position: Int) {
         holder.itemTitle.text = titles[position]
         holder.itemDetail.text = details[position]
         holder.itemImage.setImageResource(images[position])
