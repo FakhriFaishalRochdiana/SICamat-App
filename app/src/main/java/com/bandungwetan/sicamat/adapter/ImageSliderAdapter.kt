@@ -1,9 +1,10 @@
-package com.bandungwetan.sicamat.ui.news
+package com.bandungwetan.sicamat.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bandungwetan.sicamat.databinding.ItemSliderBinding
+import com.bandungwetan.sicamat.ui.news.ImageData
 import com.bumptech.glide.Glide
 
 class ImageSliderAdapter(private val items: List<ImageData>) : RecyclerView.Adapter<ImageSliderAdapter.ImageViewHolder>() {

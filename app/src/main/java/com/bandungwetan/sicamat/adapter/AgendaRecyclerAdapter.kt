@@ -1,4 +1,4 @@
-package com.bandungwetan.sicamat.ui.home.agenda
+package com.bandungwetan.sicamat.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -16,12 +16,12 @@ class AgendaRecyclerAdapter : RecyclerView.Adapter<AgendaRecyclerAdapter.ViewHol
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): AgendaRecyclerAdapter.ViewHolder {
+    ): ViewHolder {
         val v = LayoutInflater.from(parent.context).inflate(R.layout.news_data,parent,false)
         return ViewHolder(v)
     }
 
-    override fun onBindViewHolder(holder: AgendaRecyclerAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.itemTitle.text = titles[position]
         holder.itemDetail.text = details[position]
     }

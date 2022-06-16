@@ -1,4 +1,4 @@
-package com.bandungwetan.sicamat.ui.news
+package com.bandungwetan.sicamat.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -19,12 +19,12 @@ class NewsRecyleviewAdapter : RecyclerView.Adapter<NewsRecyleviewAdapter.ViewHol
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): NewsRecyleviewAdapter.ViewHolder {
+    ): ViewHolder {
         val v = LayoutInflater.from(parent.context).inflate(R.layout.news_data,parent,false)
         return ViewHolder(v)
     }
 
-    override fun onBindViewHolder(holder: NewsRecyleviewAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.itemTitle.text = titles[position]
         holder.itemDetail.text = details[position]
         holder.itemImage.setImageResource(images[position])

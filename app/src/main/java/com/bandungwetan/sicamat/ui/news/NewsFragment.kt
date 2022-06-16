@@ -14,6 +14,8 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import com.bandungwetan.sicamat.R
+import com.bandungwetan.sicamat.adapter.ImageSliderAdapter
+import com.bandungwetan.sicamat.adapter.NewsRecyleviewAdapter
 import com.bandungwetan.sicamat.databinding.FragmentNewsBinding
 
 class NewsFragment : Fragment() {
